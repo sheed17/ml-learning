@@ -1,9 +1,12 @@
 import pandas as pd
 
-#dataframes, series, 
-
-#when working with these work on jupyter notebook for the sake of the kernel where it auto updates the data and its not based on chronological order or deleting something
-
+#series, dataframes
+#Math operations with dataframes
+#Functions, creating columns, and filling the rows with data
+#dropna, fillna, notna
+#Iterrating over rows and columns
+#Grouping (like grouping by job and based on their job i get their age and then aggregate functions)
+#Concatenating, merging, and joining
 
 
 """
@@ -147,6 +150,12 @@ print(descending)
 
 """
 
+
+
+
+"""
+Concatenating, merging, and joining
+
 df1 = pd.DataFrame({
     'Item': ['A', 'B', 'C'],
     'Price': [10, 20, 30]
@@ -157,10 +166,10 @@ df2 = pd.DataFrame({
     'Price': [40, 50, 60]
 })
 
-"""result = pd.concat([df1, df2])
+result = pd.concat([df1, df2])
 result = result.reset_index()
 result = result.drop('index', axis=1)
-print(result)"""
+print(result)
 
 df3 = pd.DataFrame({
     'Item': ['B', 'C', 'D'],
@@ -171,7 +180,6 @@ result = pd.merge(df1, df3, how="left")
 print(result)
 
 #Same goes if i were to add new rows and columns such as addinng country and its group or whatever you just concat
-# concat is to add stuff, merge is for merging on match on columns, and join is for match on an index
 
 
 df4 = pd.DataFrame({
@@ -184,6 +192,13 @@ df5 = pd.DataFrame({
 
 result = df5.join(df4, how='outer')
 print(result)
+
+
+# rule of thumb merge if there is a match on column, join if there is a match on index, and concat to pretty much add new data to whatever it is that you want to add
+
+"""
+print("Done")
+
 
 
 
