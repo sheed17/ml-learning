@@ -2,8 +2,14 @@ import numpy as np
 
 
 #-----numpy basics------#
-#size, shape, ndim, dtype
-#ones, full, zeros, empty, arange, linspace
+#size, shape, dimensions, data type
+#linspace, arange
+#min, max, std, etc
+#zeros, ones, empty, full
+#inserting, deleting, and appending for 3D arrays axis = 0 for entire matrix, axis = 1 for rows, axis = 2, for columns
+#concatenating, vstack, hstack, splitting
+#resizing
+#random: random.random, random.randint, random.binomial, random.choice
 
 
 """a_mul = np.array([[[1,2,3],
@@ -113,7 +119,10 @@ a.ravel()
 
 """
 
+""" random for numpy
+
 #numbers = np.random.random(100)
+#print(numbers)
 
 numbers = np.random.randint(100, size=4)
 print(numbers)
@@ -123,7 +132,7 @@ print(numbers)
 
 numbers = np.random.choice([2,1,3,4], size=(2,3,3))
 print(numbers)
-
+"""
 
 
 
